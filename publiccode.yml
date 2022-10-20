@@ -62,7 +62,7 @@ it:
     pagopa: false
     spid: true
   riuso:
-    codiceIPA: data
+    codiceIPA: 
 legal:
   license: EUPL-1.2
   mainCopyrightOwner: Liguria Digitale
