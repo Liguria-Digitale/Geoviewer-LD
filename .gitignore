@@ -1,0 +1,7 @@
+.svn/** 
+.svn/wc.db
+cypress/videos/**
+dist/static/**
+dist/stats-report.txt
+node_modules/
+.vscode/

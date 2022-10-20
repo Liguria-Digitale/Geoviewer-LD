@@ -1,0 +1,17 @@
+{
+  "presets": ["es2015", "stage-2"],
+  "plugins": [
+    ["transform-runtime"],
+    ["transform-vue-jsx"],
+    ["dynamic-import-webpack"],
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "~src/assets/css/element-gv-theme"
+      }
+    ]
+  ],
+  "comments": false,
+  "compact": "auto"
+}

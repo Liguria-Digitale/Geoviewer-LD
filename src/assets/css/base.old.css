@@ -1,0 +1,352 @@
+/* ----------------------------------------------- */
+
+/* BASE */
+
+/* ----------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+
+/* ----------------------------------------------- */
+
+/* Gestione colori customizzabili */
+
+/* ----------------------------------------------- */
+
+.draggable {
+  cursor: move;
+}
+
+.gv-color-scheme {
+  background-color: #24386c;
+  color: #ccc;
+  border-color: #ccc;
+}
+
+.gv-inverted-color-scheme {
+  color: #24386c;
+  background-color: #ccc;
+}
+
+.gv-secondary-color-scheme {
+  background-color: #527c41;
+  color: #ccc;
+}
+
+.gv-default-font {
+  font-family: 'Raleway', Arial, sans-serif !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.gv-button {
+  background-color: #24386c;
+  color: #ccc;
+  border-color: #ccc;
+  cursor: pointer;
+  height: 24px;
+  border-width: 1px;
+  border-radius: 2px;
+  border-style: solid;
+  width: 36px;
+  margin-right: 10px;
+  padding: 4px 10px;
+}
+
+.gv-button-selected {
+  background: rgb(70, 99, 170);
+  border-color: rgb(68, 129, 221);
+  color: #fff;
+}
+
+.gv-button:hover {
+  background: rgb(80, 96, 137);
+  border-color: rgb(80, 96, 137);
+  color: #fff;
+}
+
+.gv-button.is-active,
+.gv-button:active {
+  background-color: #24386c;
+  color: #ccc;
+  border-color: #ccc;
+}
+
+.gv-button:active {
+  outline: 0;
+}
+
+.gv-tool-container {
+  z-index: 800;
+}
+
+.gv-tool {
+  float: left;
+  clear: both;
+  position: absolute;
+}
+
+/* .gv-tool-top,
+.gv-tool-bottom {
+  position: absolute;
+  z-index: 1000;
+} */
+
+.gv-tool-left {
+  left: 0;
+  margin-left: 10px;
+}
+
+.gv-tool-right {
+  right: 0;
+
+  float: right;
+  margin-right: 10px;
+}
+
+.gv-tool-top {
+  z-index: 700;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+}
+
+.gv-tool-bottom {
+  z-index: 700;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+.gv-tool-top.gv-tool-left .gv-tool {
+  margin: 0px 0px;
+}
+
+.gv-tool-bottom.gv-tool-right {
+  display: block;
+  position: absolute;
+  right: 10px !important;
+  bottom: 10px;
+}
+
+.gv-tool-bottom.gv-tool-right .gv-tool {
+  margin: 0px 0px;
+}
+
+/* ----------------------------------------------- */
+/* LEAFLET */
+/* ----------------------------------------------- */
+.leaflet-control-container {
+  z-index: 800;
+}
+
+.leaflet-container {
+  background-color: #fff;
+}
+
+/* FINE LEAFLET MODIFICHE CUSTOM */
+
+/* CLUSTER MARKER */
+
+.leaflet-cluster-anim .leaflet-marker-icon,
+.leaflet-cluster-anim .leaflet-marker-shadow {
+  -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+  -moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+  -o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+.leaflet-cluster-spider-leg {
+  /* stroke-dashoffset (duration and function) should match with leaflet-marker-icon transform in order to track it exactly */
+  -webkit-transition: -webkit-stroke-dashoffset 0.3s ease-out, -webkit-stroke-opacity 0.3s ease-in;
+  -moz-transition: -moz-stroke-dashoffset 0.3s ease-out, -moz-stroke-opacity 0.3s ease-in;
+  -o-transition: -o-stroke-dashoffset 0.3s ease-out, -o-stroke-opacity 0.3s ease-in;
+  transition: stroke-dashoffset 0.3s ease-out, stroke-opacity 0.3s ease-in;
+}
+
+.marker-cluster-small {
+  background-color: rgba(181, 226, 140, 0.6);
+}
+
+.marker-cluster-small div {
+  background-color: rgba(110, 204, 57, 0.6);
+}
+
+.marker-cluster-medium {
+  background-color: rgba(241, 211, 87, 0.6);
+}
+
+.marker-cluster-medium div {
+  background-color: rgba(240, 194, 12, 0.6);
+}
+
+.marker-cluster-large {
+  background-color: rgba(253, 156, 115, 0.6);
+}
+
+.marker-cluster-large div {
+  background-color: rgba(241, 128, 23, 0.6);
+}
+
+.marker-cluster {
+  background-clip: padding-box;
+  border-radius: 20px;
+}
+
+.marker-cluster div {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 15px;
+  font: 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.marker-cluster span {
+  line-height: 30px;
+}
+
+/* ----------------------------------------------- */
+
+/* GV */
+
+/* ----------------------------------------------- */
+
+#gv-container {
+  width: 100%;
+  height: 100%;
+}
+
+#gv-title {
+  position: absolute;
+  left: 56px;
+  top: 10px;
+  height: 26px;
+  z-index: 799;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  overflow-y: hidden;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  line-height: 28px;
+  max-width: 800px;
+}
+
+.ap-input,
+.ap-hint {
+  border-radius: 0px;
+  border: 1px solid #24386c;
+  color: #24386c;
+  height: 26px;
+  padding-left: 10px;
+}
+
+.ap-icon-pin {
+  display: none;
+}
+
+/* ----------------------------------------------- */
+/* ELEMENT */
+/* ----------------------------------------------- */
+
+.el-row {
+  padding: 5px 5px 5px 15px;
+}
+
+.row-bg {
+  background-color: #ccc;
+}
+
+.el-select-dropdown__wrap {
+  overflow: auto;
+}
+
+.el-button--mini,
+.el-button--mini.is-round {
+  padding: 4px 10px;
+}
+
+.el-select-dropdown__list {
+  max-width: 400px;
+}
+
+.el-select-dropdown__item {
+  height: 40px;
+  font-size: 12px;
+}
+
+.el-button {
+  border: 0px;
+}
+
+.el-input--mini .el-input__inner {
+  height: 24px;
+}
+
+.el-form-item {
+  margin-bottom: 2px !important;
+}
+
+/* ----------------------------------------------- */
+/* VUEBAR                                          */
+/* ----------------------------------------------- */
+
+.vuebar-element {
+  height: 250px;
+  width: 100%;
+  max-width: 500px;
+  background: #dfe9fe;
+}
+
+.vb > .vb-dragger {
+  z-index: 5;
+  width: 12px;
+  right: 0;
+}
+
+.vb > .vb-dragger > .vb-dragger-styler {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotate3d(0, 0, 0, 0);
+  transform: rotate3d(0, 0, 0, 0);
+  -webkit-transition: background-color 100ms ease-out, margin 100ms ease-out, height 100ms ease-out;
+  transition: background-color 100ms ease-out, margin 100ms ease-out, height 100ms ease-out;
+  background-color: rgba(100, 100, 100, 0.1);
+  margin: 5px 5px 5px 0;
+  border-radius: 20px;
+  height: calc(100% - 10px);
+  display: block;
+}
+
+.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+.vb > .vb-dragger:hover > .vb-dragger-styler {
+  background-color: rgba(100, 100, 100, 0.5);
+  margin: 0px;
+  height: 100%;
+}
+
+.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
+  background-color: rgba(100, 100, 100, 0.5);
+  margin: 0px;
+  height: 100%;
+}
+
+.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
+  background-color: rgba(100, 100, 100, 0.5);
+}

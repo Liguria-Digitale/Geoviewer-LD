@@ -1,0 +1,53 @@
+<template>
+  <div id="gv-__nome-componente__-panel" class="gv-__nome-componente__-panel">
+    <gv-title title="__title__" :divId="'gv-__nome-componente__-panel'" :noClose="true"></gv-title>
+    <div class="gv-__nome-componente__-body gv-inverted-color-scheme"></div>
+  </div>
+</template>
+
+<script>
+import Vue from "vue";
+
+import { Loading, Notification } from "element-ui";
+
+export default {
+  name: "gv-__nome-componente__-panel",
+  data() {
+    return {
+      options: GV.config.getToolOptions("gv-__nome-componente__-button")
+    };
+  },
+  computed: {},
+  methods: {
+    subscribeMapEvent(event) {}
+  },
+  mounted() {
+    // GESTIONE EVENTI
+    GV.eventBus.$on("gv-control-__nome-componente__-activate", event => {
+      this.subscribeMapEvent(event);
+    });
+    GV.eventBus.$on("gv-control-__nome-componente__-deactivate", event => {
+      GV.app.map.off("__map-event__");
+    });
+    this.subscribeMapEvent(event);
+  }
+};
+</script>
+
+<style>
+.gv-__nome-componente__-panel {
+  position: absolute;
+  width: 340px;
+  left: 0px;
+  top: 0px;
+  margin-left: 10px;
+  margin-top: 50px;
+  z-index: 800;
+}
+
+.gv-__nome-componente__-body {
+  padding: 5px;
+  width: 330px;
+  height: 200px;
+}
+</style>
