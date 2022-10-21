@@ -1,8 +1,8 @@
-# This repository adheres to the publiccode.yml standard by including this
+# This repository adheres to the publiccode.yml standard by including this 
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/italia/publiccode.yml
 
-publiccodeYmlVersion: "0.2"
+publiccodeYmlVersion: '0.2'
 applicationSuite: GeoViewer
 categories:
   - geographic-information-systems
@@ -37,9 +37,40 @@ description:
     genericName: GeoViewer
     localisedName: GeoViewer
     longDescription: |
-      Libreria per lo sviluppo di applicazioni cartografiche
-      Basata su standard OGC / INSPIRE / RNDT
-      Componente cartografico del Geoportale
+      Libreria per lo sviluppo di applicazioni cartografiche Basata su standard
+
+      OGC  INSPIRE  RNDT Componente cartografico del Geoportale
+
+      - navigazione catalogo per aggiunta di mappe
+
+      - info
+
+      - carica wms, kml e json
+
+      - ricerca indirizzi
+
+      - download mappa
+
+      - download mappe 
+
+      - gestione legenda
+
+      - visualizzazione scheda medatati del dataset (Inspire compliant per 
+
+      interoperabilità con i dati territoriali, esposti in formato xml e in
+      https )
+
+      - visualizzazione scheda medatati del servizio WMS (Inspire compliant per
+
+      interoperabilità con i dati territoriali, esposti in formato xml e in
+
+      https)
+
+      - visualizzazione scheda medatati del servizio WFS (se presente) (Inspire
+
+      compliant per interoperabilità con i dati territoriali, esposti in formato
+
+      xml e in https)
     shortDescription: Libreria per lo sviluppo di applicazioni cartografiche
 developmentStatus: stable
 intendedAudience:
@@ -55,14 +86,14 @@ it:
     lineeGuidaDesign: true
     misureMinimeSicurezza: true
     modelloInteroperabilita: true
-  countryExtensionVersion: "0.2"
+  countryExtensionVersion: '0.2'
   piattaforme:
     anpr: false
     cie: true
     pagopa: false
     spid: true
   riuso:
-    codiceIPA: data 
+    codiceIPA: data
 legal:
   license: EUPL-1.2
   mainCopyrightOwner: Liguria Digitale
@@ -80,6 +111,6 @@ maintenance:
 name: GeoViewer
 platforms:
   - web
-releaseDate: "2022-10-03"
+releaseDate: '2022-10-03'
 softwareType: standalone/web
-url: "https://github.com/Liguria-Digitale/Geoviewer-LD"
+url: 'https://github.com/Liguria-Digitale/Geoviewer-LD'
